@@ -6,15 +6,11 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/09 12:24:49 by kguibout          #+#    #+#             */
-/*   Updated: 2020/05/30 21:31:21 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/05 16:10:51 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "internal/libft_vector_internal.h"
-
-/*
-**	Be careful, allocated memory are not fill with zero !
-*/
 
 bool	vector_init_n(t_vector *vector, size_t sizeof_elem, size_t numof_elem)
 {

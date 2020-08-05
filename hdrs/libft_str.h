@@ -6,7 +6,7 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 13:47:43 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/05 18:29:46 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/05 19:05:07 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,18 @@ int		ft_isalnum(int c);
 
 /**
  * \fn		int ft_isalpha(int c)
- * \brief	Reproduction of isalpha() function (test whether c is a character of
- * 		class alpha in the current locale).
+ * \brief	Reproduction of isalpha() function (test whether c is a character
+ * 		of class alpha in the current locale).
  * \return	1 if c is an alphabetic character, otherwise 0.
  */
 int		ft_isalpha(int c);
 
 /**
  * \fn		int ft_isascii(int c)
- * \brief	Reproduction of isalpha() function (test whether c is a 7-bit
+ * \brief	Reproduction of isascii() function (test whether c is a 7-bit
  * 		US-ASCII character code).
- * \return	1 if c is a 7-bit US-ASCII character code between 0 and decimal 127
- * 		inclusive, otherwise 0.
+ * \return	1 if c is a 7-bit US-ASCII character code between 0 and decimal
+ * 		127 inclusive, otherwise 0.
  */
 int		ft_isascii(int c);
 
@@ -292,7 +292,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char	*ft_strncat(char *dest, const char *src, size_t n);
 
 /**
- * \fn		int ft_strcmp(const char *s1, const char *s2)
+ * \fn		int ft_strncmp(const char *s1, const char *s2, size_t n)
  * \brief	Reproduction of strncmp() function (compare up to n bytes of two
  * 		strings).
  * \return	Integer equal to the difference between the values of the first pair
