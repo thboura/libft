@@ -6,7 +6,7 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/29 17:05:01 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/04 22:45:17 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/05 18:24:04 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,6 @@ static char		**free_error(char ***tab, size_t size)
 	return (NULL);
 }
 
-/**
- * \fn		char ** ft_strsplit(char const *s, char c)
- * \brief	Allocates and returns an array of “fresh” strings (all ending with
- * 		'\\0', including the array itself) obtained by spliting s using the
- * 		character c as a delimiter.
- * \return	Array of "fresh" strings.
- * 		If an allocation fails, free all elements allocated and return NULL.
- */
 char			**ft_strsplit(const char *s, char c)
 {
 	char	**tab;

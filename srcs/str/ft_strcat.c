@@ -6,19 +6,12 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:24:46 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/04 18:56:40 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/05 18:12:32 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * \fn		char *ft_strcat(char *dest, const char *src)
- * \brief	Reproduction of strcat() function (appends a string to another one).
- * \param	dest String to extend
- * \param	src String to append
- * \return	Pointer to the resulted string.
- */
 char	*ft_strcat(char *dest, const char *src)
 {
 	size_t	dest_len;

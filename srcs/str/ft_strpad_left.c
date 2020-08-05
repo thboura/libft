@@ -6,19 +6,12 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 16:09:32 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/04 22:16:18 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/05 18:25:00 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * \fn		char *ft_strpad_left(const char *s, char const c, t_u32 n)
- * \brief	Allocates and returns a string which is a copy of s string with n
- * 		number of c character added at the start.
- * \return	Pointer on resulting string.
- * 		If the allocation failed or s is empty, return NULL.
- */
 char	*ft_strpad_left(const char *s, char const c, t_u32 n)
 {
 	t_u32	i;

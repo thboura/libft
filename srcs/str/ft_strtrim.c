@@ -6,20 +6,12 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/29 16:41:50 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/04 23:02:16 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/05 18:19:35 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * \fn		char *ft_strtrim(char const *s)
- * \brief	Allocates and returns a copy of the string given as argument without
- * 		whitespaces (' ', '\\n' and '\\t') at the beginning or at the end of the
- * 		string.
- * \return	Pointer on the string.
- * 		If the allocation fails or s is empty, return NULL.
- */
 char	*ft_strtrim(char const *s)
 {
 	size_t	i;

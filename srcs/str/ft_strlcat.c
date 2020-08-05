@@ -6,24 +6,12 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/27 23:24:27 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/04 19:29:33 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/05 18:28:19 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * \fn		size_t ft_strlcat(char *dest, const char *src, size_t size)
- * \brief	Reproduction of strlcat() function (appends a src string to the end
- * 		of dest, at most size - strlen(dest) - 1 bytes).
- * \param	dest String to extend
- * \param	src String to append
- * \param	size Size of buffer
- * \return	Intended length of resulting string (initial length of dest plus
- * 		length of src).
- * 		If return value is greater than size, then it means that the buffer
- * 		size was too low and some data was lost.
- */
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	dest_len;

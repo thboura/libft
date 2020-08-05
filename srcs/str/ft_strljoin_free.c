@@ -6,7 +6,7 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 12:00:16 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/04 20:55:26 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/05 18:27:35 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,6 @@ static char	*join(size_t size, char *s1, char *s2)
 	return (str);
 }
 
-/**
- * \fn		char *ft_strljoin_free(char *s1, char *s2, t_u8 num_param,
- * 		size_t size)
- * \brief	Allocates and returns a “fresh” string ending with a null byte,
- * 		result of the concatenation of s1 and s2 up to size - 1 bytes,
- * 		and free those strings depending the value of num_param
- * \param	s1 Preffix string
- * \param	s2 Suffix string
- * \param	num_of_param Strings to free (0 for none, 1 for s1, 2 for s2,
- * 					and 3 for both)
- * \param	size Size of buffer
- * \return	Pointer to the "fresh" string.
- * 		If the allocation fails, returns NULL.
- */
 char		*ft_strljoin_free(char *s1, char *s2, t_u8 num_param,
 	size_t size)
 {

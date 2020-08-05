@@ -6,7 +6,7 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 11:16:40 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/04 22:49:22 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/05 18:23:47 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,14 +80,6 @@ static int		split(char *s, char *char_set, char **tab, size_t size_tab)
 	return (1);
 }
 
-/**
- * \fn		char ** ft_strssplit(char const *s, char *char_set)
- * \brief	Allocates and returns an array of “fresh” strings (all ending with
- * 		'\\0', including the array itself) obtained by spliting s using all
- * 		characters contained in char_set string as a delimiter.
- * \return	Array of "fresh" strings.
- * 		If an allocation fails, free all elements allocated and return NULL.
- */
 char			**ft_strssplit(const char *s, char *char_set)
 {
 	char	**tab;

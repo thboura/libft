@@ -6,21 +6,12 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/28 00:57:12 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/04 21:11:51 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/05 18:26:45 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * \fn		char *ft_strncat(char *dest, const char *src, size_t len)
- * \brief	Reproduction of strncat() function (appends at most len bytes of a
- * 		string to another one).
- * \param	dest String to extend
- * \param	src String to append
- * \param	len	Length of src to copy
- * \return	Pointer to the resulted string.
- */
 char	*ft_strncat(char *dest, const char *src, size_t len)
 {
 	size_t	dest_len;
