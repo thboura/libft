@@ -6,7 +6,7 @@
 #    By: thboura <thboura@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/05 16:22:48 by kuibout           #+#    #+#              #
-#    Updated: 2020/08/04 12:35:33 by thboura          ###   ########.fr        #
+#    Updated: 2020/08/06 16:36:59 by thboura          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,10 +38,10 @@ LFT_INTERNAL_HDRS:=	libft_map_internal.h		\
 LFT_INTERNAL_HDRS := $(addprefix $(LFT_INTERNAL_HDRDIR),$(LFT_INTERNAL_HDRS))
 
 LFT_HDRS :=	$(LFT_INTERNAL_HDRS)				\
+			clock.h								\
 			libft.h								\
 			libft_bitsize.h						\
 			libft_conv.h						\
-			libft_vector.h						\
 			libft_gnl.h							\
 			libft_io.h							\
 			libft_lst.h							\
@@ -49,14 +49,13 @@ LFT_HDRS :=	$(LFT_INTERNAL_HDRS)				\
 			libft_math.h						\
 			libft_mem.h							\
 			libft_str.h							\
+			libft_vector.h
 
 LFT_HDRS := $(addprefix $(LFT_HDRDIR),$(LFT_HDRS))
 
 SRCDIR_CLOCK := clock/
 
 SRCDIR_CONV := conv/
-
-SRCDIR_VECTOR := vector/
 
 SRCDIR_GNL := gnl/
 
@@ -74,12 +73,13 @@ SRCDIR_MEM := mem/
 
 SRCDIR_STR := str/
 
+SRCDIR_VECTOR := vector/
+
 LFT_OBJDIR := objs/
 
 LFT_OBJDIRS :=	$(LFT_OBJDIR)									\
 				$(LFT_OBJDIR)$(SRCDIR_CLOCK)					\
 				$(LFT_OBJDIR)$(SRCDIR_CONV)						\
-				$(LFT_OBJDIR)$(SRCDIR_VECTOR)					\
 				$(LFT_OBJDIR)$(SRCDIR_GNL)						\
 				$(LFT_OBJDIR)$(SRCDIR_IO)						\
 				$(LFT_OBJDIR)$(SRCDIR_LST)						\
@@ -87,10 +87,11 @@ LFT_OBJDIRS :=	$(LFT_OBJDIR)									\
 				$(LFT_OBJDIR)$(SRCDIR_MATH)						\
 				$(LFT_OBJDIR)$(SRCDIR_MATH)$(SRCDIR_MATH_VEC)	\
 				$(LFT_OBJDIR)$(SRCDIR_MEM)						\
-				$(LFT_OBJDIR)$(SRCDIR_STR)
+				$(LFT_OBJDIR)$(SRCDIR_STR)						\
+				$(LFT_OBJDIR)$(SRCDIR_VECTOR)
 
-SRC_CLOCK :=	clock_p2.c	\
-				clock.c
+SRC_CLOCK :=	clock.c		\
+				clock_p2.c
 
 SRCPATH_CLOCK := $(addprefix $(SRCDIR_CLOCK), $(SRC_CLOCK))
 
@@ -102,33 +103,26 @@ SRC_CONV :=	ft_atof.c		\
 
 SRCPATH_CONV := $(addprefix $(SRCDIR_CONV), $(SRC_CONV))
 
-SRC_VECTOR :=	vector_p2.c	\
-				vector_p3.c	\
-				vector_p4.c	\
-				vector.c
-
-SRCPATH_VECTOR := $(addprefix $(SRCDIR_VECTOR), $(SRC_VECTOR))
-
 SRC_GNL :=	get_next_line.c
 
 SRCPATH_GNL := $(addprefix $(SRCDIR_GNL), $(SRC_GNL))
 
-SRC_IO :=	ft_putchar_fd.c	\
-			ft_putchar.c	\
-			ft_putendl_fd.c	\
-			ft_putendl.c	\
-			ft_putnbr_fd.c	\
-			ft_putnbr.c		\
-			ft_putnstr_fd.c	\
-			ft_putnstr.c	\
-			ft_putnwstr_fd.c\
-			ft_putnwstr.c	\
-			ft_putstr_fd.c	\
-			ft_putstr.c		\
-			ft_putwchar_fd.c\
-			ft_putwchar.c	\
-			ft_putwstr_fd.c	\
-			ft_putwstr.c
+SRC_IO :=	ft_putchar.c		\
+			ft_putchar_fd.c		\
+			ft_putendl.c		\
+			ft_putendl_fd.c		\
+			ft_putnbr.c			\
+			ft_putnbr_fd.c		\
+			ft_putnstr.c		\
+			ft_putnstr_fd.c		\
+			ft_putnwstr.c		\
+			ft_putnwstr_fd.c	\
+			ft_putstr.c			\
+			ft_putstr_fd.c		\
+			ft_putwchar.c		\
+			ft_putwchar_fd.c	\
+			ft_putwstr.c		\
+			ft_putwstr_fd.c
 
 SRCPATH_IO := $(addprefix $(SRCDIR_IO), $(SRC_IO))
 
@@ -150,9 +144,9 @@ SRC_LST :=	ft_dlist_create.c	\
 
 SRCPATH_LST := $(addprefix $(SRCDIR_LST), $(SRC_LST))
 
-SRC_MAP :=	map_p2.c	\
-			map_p3.c	\
-			map.c
+SRC_MAP :=	map.c		\
+			map_p2.c	\
+			map_p3.c
 
 SRCPATH_MAP := $(addprefix $(SRCDIR_MAP), $(SRC_MAP))
 
@@ -163,43 +157,42 @@ SRC_MATH :=	clamp.c		\
 			log10.c		\
 			max.c		\
 			min.c		\
-			radian.c	\
-			vec2.c		\
-			vec2f.c		\
+			radian.c
 
 SRCPATH_MATH := $(addprefix $(SRCDIR_MATH), $(SRC_MATH))
 
-SRC_MATH_VEC :=	vec2_add.c			\
+SRC_MATH_VEC :=	vec2.c				\
+				vec2_add.c			\
 				vec2_cross.c		\
-				vec2_dist_sq.c		\
 				vec2_dist.c			\
+				vec2_dist_sq.c		\
 				vec2_div.c			\
 				vec2_dot.c			\
-				vec2_length_sq.c	\
 				vec2_length.c		\
+				vec2_length_sq.c	\
 				vec2_mul.c			\
 				vec2_normal.c		\
 				vec2_normalize.c	\
 				vec2_project.c		\
 				vec2_set_length.c	\
 				vec2_sub.c			\
-				vec2.c				\
+				vec2f.c				\
+				vec3.c				\
 				vec3_add.c			\
 				vec3_cross.c		\
-				vec3_dist_sq.c		\
 				vec3_dist.c			\
+				vec3_dist_sq.c		\
 				vec3_div.c			\
 				vec3_dot.c			\
 				vec3_equal.c		\
-				vec3_length_sq.c	\
 				vec3_length.c		\
+				vec3_length_sq.c	\
 				vec3_mul.c			\
 				vec3_normalize.c	\
 				vec3_set_length.c	\
 				vec3_sub.c			\
-				vec3.c				\
-				vec4f_p2.c			\
-				vec4f.c
+				vec4f.c				\
+				vec4f_p2.c
 
 SRCPATH_MATH_VEC := $(addprefix $(SRCDIR_MATH)$(SRCDIR_MATH_VEC), $(SRC_MATH_VEC))
 
@@ -207,8 +200,8 @@ SRC_MEM :=	ft_bzero.c		\
 			ft_freetab.c	\
 			ft_memalloc.c	\
 			ft_memccpy.c	\
-			ft_memcmp.c		\
 			ft_memchr.c		\
+			ft_memcmp.c		\
 			ft_memcpy.c		\
 			ft_memdel.c		\
 			ft_memfill.c	\
@@ -253,8 +246,8 @@ SRC_STR :=	ft_isalnum.c			\
 			ft_strnequ.c			\
 			ft_strnew.c				\
 			ft_strnstr.c			\
-			ft_strpad_left_free.c	\
 			ft_strpad_left.c		\
+			ft_strpad_left_free.c	\
 			ft_strrchr.c			\
 			ft_strsplit.c			\
 			ft_strssplit_p2.c		\
@@ -269,9 +262,15 @@ SRC_STR :=	ft_isalnum.c			\
 
 SRCPATH_STR := $(addprefix $(SRCDIR_STR), $(SRC_STR))
 
+SRC_VECTOR :=	vector.c	\
+				vector_p2.c	\
+				vector_p3.c	\
+				vector_p4.c
+
+SRCPATH_VECTOR := $(addprefix $(SRCDIR_VECTOR), $(SRC_VECTOR))
+
 LFT_SRCS :=	$(SRCPATH_CLOCK)	\
 			$(SRCPATH_CONV)		\
-			$(SRCPATH_VECTOR)	\
 			$(SRCPATH_IO)		\
 			$(SRCPATH_GNL)		\
 			$(SRCPATH_LST)		\
@@ -279,7 +278,8 @@ LFT_SRCS :=	$(SRCPATH_CLOCK)	\
 			$(SRCPATH_MATH)		\
 			$(SRCPATH_MATH_VEC)	\
 			$(SRCPATH_MEM)		\
-			$(SRCPATH_STR)
+			$(SRCPATH_STR)		\
+			$(SRCPATH_VECTOR)
 
 LFT_OBJS := $(LFT_SRCS:.c=.o)
 
@@ -309,10 +309,21 @@ PRTF_BIGINT_DIR =	bigint/
 PRTF_FLOAT_DIR =	float/
 
 PRTF_OBJDIRS :=	$(PRTF_OBJDIR)									\
+				$(PRTF_OBJDIR)$(PRTF_BIGINT_DIR)				\
 				$(PRTF_OBJDIR)$(PRTF_CONV_DIR)					\
 				$(PRTF_OBJDIR)$(PRTF_CONV_DIR)$(PRTF_FLOAT_DIR)	\
-				$(PRTF_OBJDIR)$(PRTF_UNICODE_DIR)				\
-				$(PRTF_OBJDIR)$(PRTF_BIGINT_DIR)
+				$(PRTF_OBJDIR)$(PRTF_UNICODE_DIR)
+
+PRTF_BIGINT_SRCS =	bigint_bsl.c		\
+					bigint_cmp.c		\
+					bigint_cmp_long.c	\
+					bigint_div.c		\
+					bigint_mul.c		\
+					bigint_new.c		\
+					bigint_pow2.c		\
+					bigint_pow10.c
+
+PRTF_BIGINT_SRCS := $(addprefix $(PRTF_BIGINT_DIR), $(PRTF_BIGINT_SRCS))
 
 PRTF_CONV_SRCS =	binary.c	\
 					char.c		\
@@ -331,9 +342,9 @@ PRTF_CONV_SRCS =	binary.c	\
 PRTF_CONV_SRCS := $(addprefix $(PRTF_CONV_DIR), $(PRTF_CONV_SRCS))
 
 PRTF_FLOAT_SRCS =	add_point.c		\
+					float.c			\
 					float_func.c	\
 					float_p2.c		\
-					float.c			\
 					float64.c		\
 					float128.c		\
 					round.c
@@ -346,17 +357,6 @@ PRTF_UNICODE_SRCS =	putwchar.c	\
 					wstrlen.c
 
 PRTF_UNICODE_SRCS := $(addprefix $(PRTF_UNICODE_DIR), $(PRTF_UNICODE_SRCS))
-
-PRTF_BIGINT_SRCS =	bigint_bsl.c		\
-					bigint_cmp_long.c	\
-					bigint_cmp.c		\
-					bigint_div.c		\
-					bigint_mul.c		\
-					bigint_new.c		\
-					bigint_pow2.c		\
-					bigint_pow10.c
-
-PRTF_BIGINT_SRCS := $(addprefix $(PRTF_BIGINT_DIR), $(PRTF_BIGINT_SRCS))
 
 PRTF_SRCS =	$(PRTF_CONV_SRCS)		\
 			$(PRTF_FLOAT_SRCS)		\
