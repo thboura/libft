@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kguibout <kguibout@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/27 13:33:27 by kguibout          #+#    #+#             */
-/*   Updated: 2019/03/20 05:41:47 by kguibout         ###   ########.fr       */
+/*   Updated: 2020/08/06 11:35:40 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	i = 0;
 	if (s1 == NULL || s2 == NULL)
-		return (-1);
+		return (INT32MAX);
 	if (s1 != NULL && s2 != NULL && s1 == s2)
 		return (0);
 	while (n > i)
