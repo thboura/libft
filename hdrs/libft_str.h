@@ -6,7 +6,7 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 13:47:43 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/05 19:05:07 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/06 12:14:38 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int		ft_isprint(int c);
  * \param	dst Address of string to extend
  * \param	src String to append
  * \return	Pointer to the new joined string.
- * 		If one or both strings in argument are null, return a null pointer.
+ * 		\n	If one or both strings in argument are null, return a null pointer.
  */
 char	*ft_strappend(char **dst, const char *src);
 
@@ -191,7 +191,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
  * \param	s1 Preffix string
  * \param	s2 Suffix string
  * \return	Pointer to the "fresh" string.
- * 		If the allocation fails, returns NULL.
+ * 		\n	If the allocation fails, returns NULL.
  */
 char	*ft_strjoin(const char *s1, const char *s2);
 
@@ -205,7 +205,7 @@ char	*ft_strjoin(const char *s1, const char *s2);
  * \param	num_of_param Strings to free (0 for none, 1 for s1, 2 for s2,
  * 					and 3 for both)
  * \return	Pointer to the "fresh" string.
- * 		If the allocation fails, returns NULL.
+ * 		\n	If the allocation fails, returns NULL.
  */
 char	*ft_strjoin_free(char *s1, char *s2, t_u8 num_param);
 
@@ -218,7 +218,7 @@ char	*ft_strjoin_free(char *s1, char *s2, t_u8 num_param);
  * \param	size Size of buffer
  * \return	Intended length of resulting string (initial length of dest plus
  * 		length of src).
- * 		If return value is greater than size, then it means that the buffer
+ * 		\n	If return value is greater than size, then it means that the buffer
  * 		size was too low and some data was lost.
  */
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
@@ -231,7 +231,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size);
  * \param	src String to copy
  * \param	size Size of buffer
  * \return	Length of src.
- * 		If return value is lower than size, then it means that the buffer
+ * 		\n	If return value is lower than size, then it means that the buffer
  * 		size was too low and some data was lost.
  */
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
@@ -255,7 +255,7 @@ size_t	ft_strlen(const char *s);
  * 					and 3 for both)
  * \param	size Size of buffer
  * \return	Pointer to the "fresh" string.
- * 		If the allocation fails, returns NULL.
+ * 		\n	If the allocation fails, returns NULL.
  */
 char	*ft_strljoin_free(char *s1, char *s2, t_u8 num_param,
 	size_t size);
@@ -266,7 +266,7 @@ char	*ft_strljoin_free(char *s1, char *s2, t_u8 num_param,
  * 		argument to create a “fresh” new string resulting from the successive
  * 		applications of f.
  * \return	Pointer to the "fresh" string.
- * 		If the allocation fails or s is NULL, returns NULL.
+ * 		\n	If the allocation fails or s is NULL, returns NULL.
  */
 char	*ft_strmap(const char *s, char (*f)(char));
 
@@ -276,7 +276,7 @@ char	*ft_strmap(const char *s, char (*f)(char));
  * 		argument by giving its index as first argument to create a “fresh” new
  * 		string resulting from the successive applications of f.
  * \return	Pointer to the "fresh" string.
- * 		If the allocation fails or s is empty, returns NULL.
+ * 		\n	If the allocation fails or s is empty, returns NULL.
  */
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 
@@ -297,7 +297,8 @@ char	*ft_strncat(char *dest, const char *src, size_t n);
  * 		strings).
  * \return	Integer equal to the difference between the values of the first pair
  * 		of bytes (both interpreted as type unsigned char) that differ in the
- * 		strings being compared. If n is equal to zero, this function returns 0.
+ * 		strings being compared.
+ * 		\n	If n is equal to zero, this function returns 0.
  */
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
@@ -336,8 +337,8 @@ char	*ft_strnew(size_t size);
  * \param	s2 Substring to find
  * \param	len Number of characters to search
  * \return	Pointer to the first character of the first occurrence of s2 in s1.
- * 		If s2 is an empty string, s2 is returned.
- * 		If s2 occurs nowhere in s1, NULL is returned.
+ * 		\n	If s2 is an empty string, s2 is returned.
+ * 		\n	If s2 occurs nowhere in s1, NULL is returned.
  */
 char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 
@@ -346,14 +347,14 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len);
  * \brief	Allocates and returns a string which is a copy of s string with n
  * 		number of c character added at the start.
  * \return	Pointer on resulting string.
- * 		If the allocation failed or s is empty, return NULL.
+ * 		\n	If the allocation failed or s is empty, return NULL.
  */
 char	*ft_strpad_left(const char *s, char const c, t_u32 n);
 
 /**
  * \fn		char *ft_strpad_left_free(char **as, char const c, t_u32 n)
- * \brief	Apply ft_strpad_left() function to a string. If len is equal to
- * 		zero, nothing happens.
+ * \brief	Apply ft_strpad_left() function to a string.
+ * \note	If len is equal to zero, nothing happens.
  */
 void	ft_strpad_left_free(char **as, char const c, t_u32 len);
 
@@ -372,7 +373,7 @@ char	*ft_strrchr(const char *s, int c);
  * 		'\\0', including the array itself) obtained by spliting s using the
  * 		character c as a delimiter.
  * \return	Array of "fresh" strings.
- * 		If an allocation fails, free all elements allocated and return NULL.
+ * 		\n	If an allocation fails, free all elements allocated and return NULL.
  */
 char	**ft_strsplit(const char *s, char c);
 
@@ -382,7 +383,7 @@ char	**ft_strsplit(const char *s, char c);
  * 		'\\0', including the array itself) obtained by spliting s using all
  * 		characters contained in char_set string as a delimiter.
  * \return	Array of "fresh" strings.
- * 		If an allocation fails, free all elements allocated and return NULL.
+ * 		\n	If an allocation fails, free all elements allocated and return NULL.
  */
 char	**ft_strssplit(const char *s, char *char_set);
 
@@ -392,8 +393,8 @@ char	**ft_strssplit(const char *s, char *char_set);
   * \param	s1 String where substring is searched
  * \param	s2 Substring to find
  * \return	Pointer to the first character of the first occurrence of s2 in s1.
- * 		If s2 is an empty string, s2 is returned.
- * 		If s2 occurs nowhere in s1, NULL is returned.
+ * 		\n	If s2 is an empty string, s2 is returned.
+ * 		\n	If s2 occurs nowhere in s1, NULL is returned.
  */
 char	*ft_strstr(const char *s1, const char *s2);
 
@@ -405,9 +406,9 @@ char	*ft_strstr(const char *s1, const char *s2);
  * \param	start Start index of the substring
  * \param	len	Size of the substring
  * \return	Pointer on substring.
- * 		If start and len aren’t refering to a valid substring, the behavior is
- * 		undefined.
- * 		If the allocation fails, the function returns NULL.
+ * 		\n	If start and len aren’t refering to a valid substring, the behavior
+ * 		is undefined.
+ * 		\n	If the allocation fails, the function returns NULL.
  */
 char	*ft_strsub(const char *s, unsigned int start, size_t len);
 
@@ -424,7 +425,7 @@ char	*ft_strtolower(char *str);
  * 		whitespaces (' ', '\\n' and '\\t') at the beginning or at the end of the
  * 		string.
  * \return	Pointer on the string.
- * 		If the allocation fails or s is empty, return NULL.
+ * 		\n	If the allocation fails or s is empty, return NULL.
  */
 char	*ft_strtrim(char const *s);
 

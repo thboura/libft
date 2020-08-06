@@ -6,7 +6,7 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/20 00:42:57 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/05 19:16:53 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/06 13:31:19 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,8 +131,8 @@ bool					vector_join(t_vector *vec1, t_vector *vec2);
  * \fn		bool vector_append_array(t_vector *vector, void *array,
  * 		size_t number_of_elem)
  * \brief	Add an array as multiple elements in a vector.
- * 		Invalid parameters result in undefined behaviour.
- * \return
+ * \return	True in case of success, false if an allocation failed.
+ * \note	Invalid parameters result in undefined behaviour.
  */
 bool					vector_append_array(t_vector *vector, void *array,
 							size_t number_of_elem);
@@ -149,11 +149,10 @@ bool					vector_clone(t_vector *src, t_vector *dst);
  * 		size_t numof_elem)
  * \brief	Initialize a vector with a given sizeof_elem (storage size of
  * 		this vector elements) and number of elements.
- *
- * \sa		Be carefull : allocated memory is not filled with zero (accessing
- * 		elements can result in undefined behaviour).
  * \return	True in case of success, false if the allocation of the container
  * 		failed.
+ * \note	Be carefull : allocated memory is not filled with zero (accessing
+ * 		elements can result in undefined behaviour).
  */
 bool					vector_init_n(t_vector *vector, size_t sizeof_elem,
 	size_t numof_elem);
