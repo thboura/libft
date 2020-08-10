@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   func_ft_printf.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kguibout <kguibout@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/11 13:21:27 by kguibout          #+#    #+#             */
-/*   Updated: 2020/01/22 09:08:58 by kguibout         ###   ########.fr       */
+/*   Updated: 2020/08/10 19:35:19 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,34 +32,39 @@
 
 typedef void	(*t_func)();
 
-typedef struct	s_struct64
+typedef struct s_struct64		t_struct64;
+struct							s_struct64
 {
 	t_u64	mant : 52;
 	t_u32	exp : 11;
 	t_u8	sign : 1;
-}				t_struct64;
+};
 
-typedef union	u_float64
+typedef union u_float64			t_float64;
+union							u_float64
 {
 	double		dvalue;
 	t_u64		lvalue;
 	t_struct64	struct64;
-}				t_float64;
+};
 
-typedef struct	s_struct128
+typedef struct s_struct128		t_struct128;
+struct							s_struct128
 {
 	t_u64	mant;
 	t_u32	exp : 15;
 	t_u8	sign : 1;
-}				t_struct128;
+};
 
-typedef union	u_float128
+typedef union u_float128		t_float128;
+union							u_float128
 {
 	long double		ldvalue;
 	t_struct128		struct128;
-}				t_float128;
+};
 
-typedef struct	s_string_float
+typedef struct s_string_float	t_string_float;
+struct							s_string_float
 {
 	char	str[22000];
 	int		size_str;
@@ -70,9 +75,10 @@ typedef struct	s_string_float
 	int		size_fraction;
 	int		size_added_frac;
 	int		sign;
-}				t_string_float;
+};
 
-typedef struct	s_format_float
+typedef struct s_format_float	t_format_float;
+struct							s_format_float
 {
 	t_s32			exp;
 	t_u64			mant;
@@ -88,9 +94,10 @@ typedef struct	s_format_float
 	int				cutoff_exponent;
 	int				tmp2;
 	bool			zero;
-}				t_format_float;
+};
 
-typedef struct	s_float_func
+typedef struct s_float_func		t_float_func;
+struct							s_float_func
 {
 	t_float64	float64;
 	t_float128	float128;
@@ -98,9 +105,10 @@ typedef struct	s_float_func
 	t_u32		exp;
 	int			sign;
 	int			nb_bits;
-}				t_float_func;
+};
 
-typedef enum	e_size
+typedef enum e_size				t_size;
+enum							e_size
 {
 	NONE,
 	HH,
@@ -110,9 +118,10 @@ typedef enum	e_size
 	LONG,
 	J,
 	Z
-}				t_size;
+};
 
-typedef struct	s_printf
+typedef struct s_printf			t_printf;
+struct							s_printf
 {
 	va_list	arg;
 	int		ret;
@@ -134,210 +143,213 @@ typedef struct	s_printf
 	bool	sn;
 	size_t	size_max_sn;
 	bool	sn_no_space;
-}				t_printf;
+};
 
 /*
 **	ft_vdprintf.c
 */
 
-void			ft_vdprintf(t_printf *pf);
-t_func			*static_fun(void);
+void							ft_vdprintf(t_printf *pf);
+t_func							*static_fun(void);
 
 /*
 **	length_unbr_base.c
 */
 
-size_t			length_unbr_base(uintmax_t nb, size_t length_base);
+size_t							length_unbr_base(uintmax_t nb,
+	size_t length_base);
 
 /*
 **	ft_flush.c
 */
 
-void			ft_flush(t_printf *pf);
+void							ft_flush(t_printf *pf);
 
 /*
 **	put_buffer.c
 */
 
-void			put_buffer(t_printf *pf, char c);
-void			put_buffer_2(t_printf *pf, char c);
+void							put_buffer(t_printf *pf, char c);
+void							put_buffer_2(t_printf *pf, char c);
 
 /*
 **	padded.c
 */
 
-void			padded(t_printf *pf, int length, char pad_char);
+void							padded(t_printf *pf, int length, char pad_char);
 
 /*
 **	putunbr_base.c
 */
 
-void			putunbr_base(t_printf *pf, uintmax_t nb, char *base,
-					uintmax_t size_base);
+void							putunbr_base(t_printf *pf, uintmax_t nb,
+	char *base, uintmax_t size_base);
 
 /*
 **	integer.c
 */
 
-void			func_integer(t_printf *pf);
+void							func_integer(t_printf *pf);
 
 /*
 **	string.c
 */
 
-void			func_string(t_printf *pf);
+void							func_string(t_printf *pf);
 
 /*
 **	percent.c
 */
 
-void			func_percent(t_printf *pf);
+void							func_percent(t_printf *pf);
 
 /*
 **	pointer.c
 */
 
-void			func_pointer(t_printf *pf);
+void							func_pointer(t_printf *pf);
 
 /*
 **	unsigned.c
 */
 
-void			func_unsigned(t_printf *pf);
+void							func_unsigned(t_printf *pf);
 
 /*
 **	putwchar.c
 */
 
-void			putwchar(t_printf *pf, wchar_t c);
+void							putwchar(t_printf *pf, wchar_t c);
 
 /*
 **	putwstr.c
 */
 
-void			putnwstr(t_printf *pf, wchar_t *str, size_t n);
+void							putnwstr(t_printf *pf, wchar_t *str, size_t n);
 
 /*
 **	wstrlen.c
 */
 
-size_t			wstrlen(wchar_t *str);
+size_t							wstrlen(wchar_t *str);
 
 /*
 **	wcharlen.c
 */
 
-size_t			wcharlen(wchar_t c);
+size_t							wcharlen(wchar_t c);
 
 /*
 **	wchar.c
 */
 
-void			func_wchar(t_printf *pf);
+void							func_wchar(t_printf *pf);
 
 /*
 **	char.c
 */
 
-void			func_char(t_printf *pf);
+void							func_char(t_printf *pf);
 
 /*
 **	putnbr_buffer.c
 */
 
-void			putnbr_buffer(t_printf *pf, int n);
+void							putnbr_buffer(t_printf *pf, int n);
 
 /*
 **	putstr_buffer.c
 */
 
-void			putstr_buffer(t_printf *pf, char *str, size_t n);
-void			putstr_buffer_2(t_printf *pf, char *str, size_t n);
+void							putstr_buffer(t_printf *pf, char *str,
+	size_t n);
+void							putstr_buffer_2(t_printf *pf, char *str,
+	size_t n);
 
 /*
 **	hex.c
 */
 
-void			func_hex(t_printf *pf);
+void							func_hex(t_printf *pf);
 
 /*
 **	wstr.c
 */
 
-void			func_wstr(t_printf *pf);
+void							func_wstr(t_printf *pf);
 
 /*
 **	hexx.c
 */
 
-void			func_hexx(t_printf *pf);
+void							func_hexx(t_printf *pf);
 
 /*
 **	octal.c
 */
 
-void			func_octal(t_printf *pf);
+void							func_octal(t_printf *pf);
 
 /*
 **	binary.c
 */
 
-void			func_binary(t_printf *pf);
+void							func_binary(t_printf *pf);
 
 /*
 **	ft_vdprintf_support.c
 */
 
-void			check_flag(t_printf *pf);
-void			get_flag(t_printf *pf);
-int				get_width(t_printf *pf);
-int				get_precision(t_printf *pf);
-void			get_size(t_printf *pf);
+void							check_flag(t_printf *pf);
+void							get_flag(t_printf *pf);
+int								get_width(t_printf *pf);
+int								get_precision(t_printf *pf);
+void							get_size(t_printf *pf);
 
 /*
 **	revert_bit.c
 */
 
-t_u64			reverse_bits(t_u64 value);
+t_u64							reverse_bits(t_u64 value);
 
 /*
 **	float.c
 */
 
-void			func_float(t_printf *pf);
+void							func_float(t_printf *pf);
 
 /*
 **	ft_star.c
 */
 
-void			ft_width_star(t_printf *pf);
-int				ft_precision_star(t_printf *pf);
-void			round_float(t_format_float *f);
-void			func_double128(long double dvalue, int precision,
-	t_string_float *string);
-void			print_bigint(t_bigint *bigint);
-void			func_double64(double dvalue,
+void							ft_width_star(t_printf *pf);
+int								ft_precision_star(t_printf *pf);
+void							round_float(t_format_float *f);
+void							func_double128(long double dvalue,
+	int precision, t_string_float *string);
+void							print_bigint(t_bigint *bigint);
+void							func_double64(double dvalue,
 	int precision, t_string_float *string);
 
 /*
 **	float_dunc.c
 */
 
-void			normalize_scale(t_format_float *f);
-void			compute_float(t_format_float *f);
-void			add_point(t_format_float *f, int precision);
-void			add_digit_exp(t_format_float *f);
+void							normalize_scale(t_format_float *f);
+void							compute_float(t_format_float *f);
+void							add_point(t_format_float *f, int precision);
+void							add_digit_exp(t_format_float *f);
 
 /*
 **	ft_color.c
 */
 
-size_t			ft_color(t_printf *pf, char *str, size_t pos);
+size_t							ft_color(t_printf *pf, char *str, size_t pos);
 
 /*
 **	raw.c
 */
 
-void			func_raw(t_printf *pf);
+void							func_raw(t_printf *pf);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/20 00:42:57 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/06 13:31:19 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/06 17:22:32 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@
  */
 typedef struct			s_vector
 {
-	void	*items;			/*!< Array of elements */
-	size_t	capacity;		/*!< Maximum number of elements */
-	size_t	total;			/*!< Number of elements currently in the array */
-	size_t	sizeof_elem;	/*!< Storage size of elements */
+	void	*items;			/**< Array of elements */
+	size_t	capacity;		/**< Maximum number of elements */
+	size_t	total;			/**< Number of elements currently in the array */
+	size_t	sizeof_elem;	/**< Storage size of elements */
 }						t_vector;
 
 /**
