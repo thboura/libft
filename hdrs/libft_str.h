@@ -6,7 +6,7 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 13:47:43 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/06 12:14:38 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/11 13:02:09 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ char	*ft_strcpy(char *dest, const char *src);
 
 /**
  * \fn		void ft_strctrim_left(char **a_str, char const c)
- * \brief	Replace all leading characters of a non-null string equal to c by
+ * \brief	Replaces all leading characters of a non-null string equal to c by
  * 		'\\0'.
  * \param	a_str Address of the string
  * \param	c Character to replace
@@ -131,7 +131,7 @@ void	ft_strctrim_left(char **a_str, char const c);
 
 /**
  * \fn		void ft_strctrim_right(char **a_str, char const c)
- * \brief	Replace all trailing characters of a non-null string equal to c by
+ * \brief	Replaces all trailing characters of a non-null string equal to c by
  * 		'\\0'.
  * \param	a_str Address of the string
  * \param	c Character to replace
@@ -161,7 +161,7 @@ int		ft_strequ(char const *s1, char const *s2);
 
 /**
  * \fn		char *ft_strinsert(char **dest, char const *src, t_u32 index)
- * \brief	Allocate and returns a string resulting of an insertion of src
+ * \brief	Allocates and returns a string resulting of an insertion of src
  * 		string in dest string at given index.
  * \param	dest Address of receiving string
  * \param	src String to insert
@@ -353,7 +353,7 @@ char	*ft_strpad_left(const char *s, char const c, t_u32 n);
 
 /**
  * \fn		char *ft_strpad_left_free(char **as, char const c, t_u32 n)
- * \brief	Apply ft_strpad_left() function to a string.
+ * \brief	Applies ft_strpad_left() function to a string.
  * \note	If len is equal to zero, nothing happens.
  */
 void	ft_strpad_left_free(char **as, char const c, t_u32 len);
@@ -373,7 +373,8 @@ char	*ft_strrchr(const char *s, int c);
  * 		'\\0', including the array itself) obtained by spliting s using the
  * 		character c as a delimiter.
  * \return	Array of "fresh" strings.
- * 		\n	If an allocation fails, free all elements allocated and return NULL.
+ * 		\n	If an allocation fails, free all elements allocated and returns
+ * 		NULL.
  */
 char	**ft_strsplit(const char *s, char c);
 
@@ -383,7 +384,8 @@ char	**ft_strsplit(const char *s, char c);
  * 		'\\0', including the array itself) obtained by spliting s using all
  * 		characters contained in char_set string as a delimiter.
  * \return	Array of "fresh" strings.
- * 		\n	If an allocation fails, free all elements allocated and return NULL.
+ * 		\n	If an allocation fails, free all elements allocated and returns
+ * 		NULL.
  */
 char	**ft_strssplit(const char *s, char *char_set);
 
@@ -406,7 +408,7 @@ char	*ft_strstr(const char *s1, const char *s2);
  * \param	start Start index of the substring
  * \param	len	Size of the substring
  * \return	Pointer on substring.
- * 		\n	If start and len aren’t refering to a valid substring, the behavior
+ * 		\n	If start and len are not refering to a valid substring, the behavior
  * 		is undefined.
  * 		\n	If the allocation fails, the function returns NULL.
  */
@@ -414,7 +416,7 @@ char	*ft_strsub(const char *s, unsigned int start, size_t len);
 
 /**
  * \fn		char *ft_strtolower(char *str)
- * \brief	Apply ft_tolower() function to all characters in a string.
+ * \brief	Applies ft_tolower() function to all characters in a string.
  * \return	Pointer on the string.
  */
 char	*ft_strtolower(char *str);
@@ -445,7 +447,7 @@ int		ft_toupper(int c);
 
 /**
  * \fn		size_t ft_wstrlen(wchar_t *str)
- * \brief	Get length of fixed size unicode string.
+ * \brief	Gets length of fixed size unicode string.
  * \return	Length of the string.
  */
 size_t	ft_wstrlen(wchar_t *str);

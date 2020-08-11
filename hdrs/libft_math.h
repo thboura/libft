@@ -6,7 +6,7 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 08:58:35 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/10 19:03:12 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/11 12:32:43 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -187,7 +187,7 @@ struct						s_complex
 
 /**
  * \fn		long clampl(long a, long min, long max)
- * \brief	Clamp a long value to an inclusive range.
+ * \brief	Clamps a long value to an inclusive range.
  * \param	a Value to be clamped
  * \param	min Lower bound of the result
  * \param	max Upper bound of the result
@@ -196,7 +196,7 @@ struct						s_complex
 long						clampl(long a, long min, long max);
 /**
  * \fn		int clampi(int a, int min, int max)
- * \brief	Clamp an int value to an inclusive range.
+ * \brief	Clamps an int value to an inclusive range.
  * \param	a Value to be clamped
  * \param	min Lower bound of the result
  * \param	max Upper bound of the result
@@ -205,7 +205,7 @@ long						clampl(long a, long min, long max);
 int							clampi(int a, int min, int max);
 /**
  * \fn		float clampf(float a, float min, float max)
- * \brief	Clamp a float value to an inclusive range.
+ * \brief	Clamps a float value to an inclusive range.
  * \param	a Value to be clamped
  * \param	min Lower bound of the result
  * \param	max Upper bound of the result
@@ -355,7 +355,7 @@ float						minf(float a, float b);
 
 /**
  * \fn		float radian(float degre)
- * \brief	Convert a value in degrees into radians.
+ * \brief	Converts a value in degrees into radians.
  * \return	Radian value.
  */
 float						radian(float degre);
@@ -366,25 +366,25 @@ float						radian(float degre);
 
 /**
  * \fn		t_vec2f vec2f(float x, float y)
- * \brief	Create a 2D vector with float coordinates from parameters.
+ * \brief	Creates a 2D vector with float coordinates from parameters.
  * \return	Created structure (not allocated).
  */
 t_vec2f						vec2f(float x, float y);
 /**
  * \fn		t_vec2i vec2i(int x, int y)
- * \brief	Create a 2D vector with int coordinates from parameters.
+ * \brief	Creates a 2D vector with int coordinates from parameters.
  * \return	Created structure (not allocated).
  */
 t_vec2i						vec2i(int x, int y);
 /**
  * \fn		t_vec2d vec2d(double x, double y)
- * \brief	Create a 2D vector with double coordinates from parameters.
+ * \brief	Creates a 2D vector with double coordinates from parameters.
  * \return	Created structure (not allocated).
  */
 t_vec2d						vec2d(double x, double y);
 /**
  * \fn		t_vec2ui vec2ui(t_u32 x, t_u32 y)
- * \brief	Create a 2D vector with unsigned int coordinates from parameters.
+ * \brief	Creates a 2D vector with unsigned int coordinates from parameters.
  * \return	Created structure (not allocated).
  */
 t_vec2ui					vec2ui(t_u32 x, t_u32 y);
@@ -395,28 +395,28 @@ t_vec2ui					vec2ui(t_u32 x, t_u32 y);
 
 /**
  * \fn		t_vec2i vec2i_add(t_vec2i vec1, t_vec2i vec2)
- * \brief	Return a 2D vector with int coordinates equal to the addition
+ * \brief	Returns a 2D vector with int coordinates equal to the addition
  * 		of vectors passed as parameters.
  * \return	New vector.
  */
 t_vec2i						vec2i_add(t_vec2i vec1, t_vec2i vec2);
 /**
  * \fn		t_vec2f vec2f_add(t_vec2f vec1, t_vec2f vec2)
- * \brief	Return a 2D vector with float coordinates equal to the addition
+ * \brief	Returns a 2D vector with float coordinates equal to the addition
  * 		of vectors passed as parameters.
  * \return	New vector.
  */
 t_vec2f						vec2f_add(t_vec2f vec1, t_vec2f vec2);
 /**
  * \fn		t_vec2d vec2d_add(t_vec2d vec1, t_vec2d vec2)
- * \brief	Return a 2D vector with double coordinates equal to the addition
+ * \brief	Returns a 2D vector with double coordinates equal to the addition
  * 		of vectors passed as parameters.
  * \return	New vector.
  */
 t_vec2d						vec2d_add(t_vec2d vec1, t_vec2d vec2);
 /**
  * \fn		t_vec2ui vec2ui_add(t_vec2ui vec1, t_vec2ui vec2)
- * \brief	Return a 2D vector with unsigned int coordinates equal to the
+ * \brief	Returns a 2D vector with unsigned int coordinates equal to the
  * 		addition of vectors passed as parameters.
  * \return	New vector.
  */
@@ -428,25 +428,25 @@ t_vec2ui					vec2ui_add(t_vec2ui vec1, t_vec2ui vec2);
 
 /**
  * \fn		float vec2f_cross(t_vec2f vec1, t_vec2f vec2)
- * \brief	Return the cross product of two 2D vectors with float coordinates.
+ * \brief	Returns the cross product of two 2D vectors with float coordinates.
  * \return	Cross product value.
  */
 float						vec2f_cross(t_vec2f vec1, t_vec2f vec2);
 /**
  * \fn		float vec2i_cross(t_vec2i vec1, t_vec2i vec2)
- * \brief	Return the cross product of two 2D vectors with int coordinates.
+ * \brief	Returns the cross product of two 2D vectors with int coordinates.
  * \return	Cross product value.
  */
 float						vec2i_cross(t_vec2i vec1, t_vec2i vec2);
 /**
  * \fn		float vec2d_cross(t_vec2d vec1, t_vec2d vec2)
- * \brief	Return the cross product of two 2D vectors with double coordinates.
+ * \brief	Returns the cross product of two 2D vectors with double coordinates.
  * \return	Cross product value.
  */
 float						vec2d_cross(t_vec2d vec1, t_vec2d vec2);
 /**
  * \fn		float vec2ui_cross(t_vec2ui vec1, t_vec2ui vec2)
- * \brief	Return the cross product of two 2D vectors with unsigned int
+ * \brief	Returns the cross product of two 2D vectors with unsigned int
  * 		coordinates.
  * \return	Cross product value.
  */
@@ -458,25 +458,25 @@ float						vec2ui_cross(t_vec2ui vec1, t_vec2ui vec2);
 
 /**
  * \fn		float vec2i_dist(t_vec2i vec1, t_vec2i vec2)
- * \brief	Return the distance between two 2D vectors with int coordinates.
+ * \brief	Returns the distance between two 2D vectors with int coordinates.
  * \return	Distance value.
  */
 float						vec2i_dist(t_vec2i vec1, t_vec2i vec2);
 /**
  * \fn		float vec2f_dist(t_vec2f vec1, t_vec2f vec2)
- * \brief	Return the distance between two 2D vectors with float coordinates.
+ * \brief	Returns the distance between two 2D vectors with float coordinates.
  * \return	Distance value.
  */
 float						vec2f_dist(t_vec2f vec1, t_vec2f vec2);
 /**
  * \fn		float vec2d_dist(t_vec2d vec1, t_vec2d vec2)
- * \brief	Return the distance between two 2D vectors with double coordinates.
+ * \brief	Returns the distance between two 2D vectors with double coordinates.
  * \return	Distance value.
  */
 float						vec2d_dist(t_vec2d vec1, t_vec2d vec2);
 /**
  * \fn		float vec2ui_dist(t_vec2ui vec1, t_vec2ui vec2)
- * \brief	Return the distance between two 2D vectors with unsigned int
+ * \brief	Returns the distance between two 2D vectors with unsigned int
  * 		coordinates.
  * \return	Distance value.
  */
@@ -488,28 +488,28 @@ float						vec2ui_dist(t_vec2ui vec1, t_vec2ui vec2);
 
 /**
  * \fn		float vec2i_dist_sq(t_vec2i vec1, t_vec2i vec2)
- * \brief	Return the square distance between two 2D vectors with int
+ * \brief	Returns the square distance between two 2D vectors with int
  * 		coordinates.
  * \return	Square distance value.
  */
 float						vec2i_dist_sq(t_vec2i vec1, t_vec2i vec2);
 /**
  * \fn		float vec2f_dist_sq(t_vec2f vec1, t_vec2f vec2)
- * \brief	Return the square distance between two 2D vectors with float
+ * \brief	Returns the square distance between two 2D vectors with float
  * 		coordinates.
  * \return	Square distance value.
  */
 float						vec2f_dist_sq(t_vec2f vec1, t_vec2f vec2);
 /**
  * \fn		float vec2d_dist_sq(t_vec2d vec1, t_vec2d vec2)
- * \brief	Return the square distance between two 2D vectors with double
+ * \brief	Returns the square distance between two 2D vectors with double
  * 		coordinates.
  * \return	Square distance value.
  */
 float						vec2d_dist_sq(t_vec2d vec1, t_vec2d vec2);
 /**
  * \fn		float vec2ui_dist_sq(t_vec2ui vec1, t_vec2ui vec2)
- * \brief	Return the square distance between two 2D vectors with unsigned int
+ * \brief	Returns the square distance between two 2D vectors with unsigned int
  * 		coordinates.
  * \return	Square distance value.
  */
@@ -521,28 +521,28 @@ float						vec2ui_dist_sq(t_vec2ui vec1, t_vec2ui vec2);
 
 /**
  * \fn		t_vec2i vec2i_div(t_vec2i vec1, int div)
- * \brief	Return a 2D vector with int coordinates equal to the division
+ * \brief	Returns a 2D vector with int coordinates equal to the division
  * 		of a given vector coordinates.
  * \return	New vector.
  */
 t_vec2i						vec2i_div(t_vec2i vec1, int div);
 /**
  * \fn		t_vec2f vec2f_div(t_vec2f vec1, float div)
- * \brief	Return a 2D vector with float coordinates equal to the division
+ * \brief	Returns a 2D vector with float coordinates equal to the division
  * 		of a given vector coordinates.
  * \return	New vector.
  */
 t_vec2f						vec2f_div(t_vec2f vec1, float div);
 /**
  * \fn		t_vec2d vec2d_div(t_vec2d vec1, double div)
- * \brief	Return a 2D vector with double coordinates equal to the division
+ * \brief	Returns a 2D vector with double coordinates equal to the division
  * 		of a given vector coordinates.
  * \return	New vector.
  */
 t_vec2d						vec2d_div(t_vec2d vec1, double div);
 /**
  * \fn		t_vec2ui vec2ui_div(t_vec2ui vec1, t_u32 div)
- * \brief	Return a 2D vector with unsigned int coordinates equal to the
+ * \brief	Returns a 2D vector with unsigned int coordinates equal to the
  * 		division of a given vector coordinates.
  * \return	New vector.
  */
@@ -554,25 +554,25 @@ t_vec2ui					vec2ui_div(t_vec2ui vec1, t_u32 div);
 
 /**
  * \fn		float vec2f_dot(t_vec2f vec1, t_vec2f vec2)
- * \brief	Return the dot product of two 2D vectors with float coordinates.
+ * \brief	Returns the dot product of two 2D vectors with float coordinates.
  * \return	Dot product value.
  */
 float						vec2f_dot(t_vec2f vec1, t_vec2f vec2);
 /**
  * \fn		float vec2i_dot(t_vec2i vec1, t_vec2i vec2)
- * \brief	Return the dot product of two 2D vectors with int coordinates.
+ * \brief	Returns the dot product of two 2D vectors with int coordinates.
  * \return	Dot product value.
  */
 float						vec2i_dot(t_vec2i vec1, t_vec2i vec2);
 /**
  * \fn		float vec2d_dot(t_vec2d vec1, t_vec2d vec2)
- * \brief	Return the dot product of two 2D vectors with double coordinates.
+ * \brief	Returns the dot product of two 2D vectors with double coordinates.
  * \return	Dot product value.
  */
 float						vec2d_dot(t_vec2d vec1, t_vec2d vec2);
 /**
  * \fn		float vec2ui_dot(t_vec2ui vec1, t_vec2ui vec2)
- * \brief	Return the dot product of two 2D vectors with unsigned int
+ * \brief	Returns the dot product of two 2D vectors with unsigned int
  * 		coordinates.
  * \return	Dot product value.
  */
@@ -584,25 +584,25 @@ float						vec2ui_dot(t_vec2ui vec1, t_vec2ui vec2);
 
 /**
  * \fn		float vec2i_length(t_vec2i vec1)
- * \brief	Return the length of a given 2D vector with int coordinates.
+ * \brief	Returns the length of a given 2D vector with int coordinates.
  * \return	Length value as float.
  */
 float						vec2i_length(t_vec2i vec1);
 /**
  * \fn		float vec2f_length(t_vec2f vec1)
- * \brief	Return the length of a given 2D vector with float coordinates.
+ * \brief	Returns the length of a given 2D vector with float coordinates.
  * \return	Length value as float.
  */
 float						vec2f_length(t_vec2f vec1);
 /**
  * \fn		float vec2d_length(t_vec2d vec1)
- * \brief	Return the length of a given 2D vector with double coordinates.
+ * \brief	Returns the length of a given 2D vector with double coordinates.
  * \return	Length value as float.
  */
 float						vec2d_length(t_vec2d vec1);
 /**
  * \fn		float vec2ui_length(t_vec2ui vec1)
- * \brief	Return the length of a given 2D vector with unsigned int
+ * \brief	Returns the length of a given 2D vector with unsigned int
  * 		coordinates.
  * \return	Length value as float.
  */
@@ -614,28 +614,28 @@ float						vec2ui_length(t_vec2ui vec1);
 
 /**
  * \fn		float vec2i_length_sq(t_vec2i vec1)
- * \brief	Return the square length of a given 2D vector with int
+ * \brief	Returns the square length of a given 2D vector with int
  * 		coordinates.
  * \return	Square length value as float.
  */
 float						vec2i_length_sq(t_vec2i vec1);
 /**
  * \fn		float vec2f_length_sq(t_vec2f vec1)
- * \brief	Return the square length of a given 2D vector with float
+ * \brief	Returns the square length of a given 2D vector with float
  * 		coordinates.
  * \return	Square length value as float.
  */
 float						vec2f_length_sq(t_vec2f vec1);
 /**
  * \fn		float vec2d_length_sq(t_vec2d vec1)
- * \brief	Return the square length of a given 2D vector with double
+ * \brief	Returns the square length of a given 2D vector with double
  * 		coordinates.
  * \return	Square length value as float.
  */
 float						vec2d_length_sq(t_vec2d vec1);
 /**
  * \fn		float vec2ui_length_sq(t_vec2ui vec1)
- * \brief	Return the square length of a given 2D vector with unsigned int
+ * \brief	Returns the square length of a given 2D vector with unsigned int
  * 		coordinates.
  * \return	Square length value as float.
  */
@@ -647,28 +647,28 @@ float						vec2ui_length_sq(t_vec2ui vec1);
 
 /**
  * \fn		t_vec2i vec2i_mul(t_vec2i vec1, int mul)
- * \brief	Return a 2D vector with int coordinates equal to the
+ * \brief	Returns a 2D vector with int coordinates equal to the
  * 		multiplication of a given vector coordinates.
  * \return	New vector.
  */
 t_vec2i						vec2i_mul(t_vec2i vec1, int mul);
 /**
  * \fn		t_vec2f vec2f_mul(t_vec2f vec1, float mul)
- * \brief	Return a 2D vector with float coordinates equal to the
+ * \brief	Returns a 2D vector with float coordinates equal to the
  * 		multiplication of a given vector coordinates.
  * \return	New vector.
  */
 t_vec2f						vec2f_mul(t_vec2f vec1, float mul);
 /**
  * \fn		t_vec2d vec2d_mul(t_vec2d vec1, double mul)
- * \brief	Return a 2D vector with double coordinates equal to the
+ * \brief	Returns a 2D vector with double coordinates equal to the
  * 		multiplication of a given vector coordinates.
  * \return	New vector.
  */
 t_vec2d						vec2d_mul(t_vec2d vec1, double mul);
 /**
  * \fn		t_vec2ui vec2ui_mul(t_vec2ui vec1, t_u32 mul)
- * \brief	Return a 2D vector with unsigned int coordinates equal to the
+ * \brief	Returns a 2D vector with unsigned int coordinates equal to the
  * 		multiplication of a given vector coordinates.
  * \return	New vector.
  */
@@ -680,28 +680,28 @@ t_vec2ui					vec2ui_mul(t_vec2ui vec1, t_u32 mul);
 
 /**
  * \fn		t_vec2i vec2i_normal(t_vec2i vec1)
- * \brief	Return the normal 2D vector (with int coordinates) of a given
+ * \brief	Returns the normal 2D vector (with int coordinates) of a given
  * 		vector.
  * \return	New vector.
  */
 t_vec2i						vec2i_normal(t_vec2i vec1);
 /**
  * \fn		t_vec2f vec2f_normal(t_vec2f vec1)
- * \brief	Return the normal 2D vector (with float coordinates) of a given
+ * \brief	Returns the normal 2D vector (with float coordinates) of a given
  * 		vector.
  * \return	New vector.
  */
 t_vec2f						vec2f_normal(t_vec2f vec1);
 /**
  * \fn		t_vec2d vec2d_normal(t_vec2d vec1)
- * \brief	Return the normal 2D vector (with double coordinates) of a given
+ * \brief	Returns the normal 2D vector (with double coordinates) of a given
  * 		vector.
  * \return	New vector.
  */
 t_vec2d						vec2d_normal(t_vec2d vec1);
 /**
  * \fn		t_vec2ui vec2ui_normal(t_vec2ui vec1)
- * \brief	Return the normal 2D vector (with unsigned int coordinates) of a
+ * \brief	Returns the normal 2D vector (with unsigned int coordinates) of a
  * 		given vector.
  * \return	New vector.
  */
@@ -713,29 +713,29 @@ t_vec2ui					vec2ui_normal(t_vec2ui vec1);
 
 /**
  * \fn		t_vec2i vec2i_normalize(t_vec2i vec1)
- * \brief	Return the normalized version of a given 2D vector with int
+ * \brief	Returns the normalized version of a given 2D vector with int
  * 		coordinates.
  * \return	New vector.
  */
 t_vec2f						vec2i_normalize(t_vec2i vec1);
 /**
  * \fn		t_vec2f vec2f_normalize(t_vec2f vec1)
- * \brief	Return the normalized version of a given 2D vector with float
+ * \brief	Returns the normalized version of a given 2D vector with float
  * 		coordinates.
  * \return	New vector.
  */
 t_vec2f						vec2f_normalize(t_vec2f vec1);
 /**
  * \fn		t_vec2d vec2d_normalize(t_vec2d vec1)
- * \brief	Return the normalized version of a given 2D vector with double
+ * \brief	Returns the normalized version of a given 2D vector with double
  * 		coordinates.
  * \return	New vector.
  */
 t_vec2d						vec2d_normalize(t_vec2d vec1);
 /**
  * \fn		t_vec2ui vec2ui_normalize(t_vec2ui vec1)
- * \brief	Return the normalized version of a given 2D vector with unsigned int
- * 		coordinates.
+ * \brief	Returns the normalized version of a given 2D vector with unsigned
+ * 		int coordinates.
  * \return	New vector.
  */
 t_vec2f						vec2ui_normalize(t_vec2ui vec1);
@@ -746,7 +746,7 @@ t_vec2f						vec2ui_normalize(t_vec2ui vec1);
 
 /**
  * \fn		t_vec2i vec2i_project(t_vec2i vec1, t_vec2i vec2)
- * \brief	Return the 2D vector (with int coordinates) projection of a given
+ * \brief	Returns the 2D vector (with int coordinates) projection of a given
  * 		vector on (or onto) a nonzero one.
  * \param	vec1 Vector projected
  * \param	vec2 Vector receiving projection.
@@ -757,7 +757,7 @@ t_vec2f						vec2ui_normalize(t_vec2ui vec1);
 t_vec2i						vec2i_project(t_vec2i vec1, t_vec2i vec2);
 /**
  * \fn		t_vec2f vec2f_project(t_vec2f vec1, t_vec2f vec2)
- * \brief	Return the 2D vector (with float coordinates) projection of a given
+ * \brief	Returns the 2D vector (with float coordinates) projection of a given
  * 		vector on (or onto) a nonzero one.
  * \param	vec1 Vector projected
  * \param	vec2 Vector receiving projection.
@@ -768,8 +768,8 @@ t_vec2i						vec2i_project(t_vec2i vec1, t_vec2i vec2);
 t_vec2f						vec2f_project(t_vec2f vec1, t_vec2f vec2);
 /**
  * \fn		t_vec2d vec2d_project(t_vec2d vec1, t_vec2d vec2)
- * \brief	Return the 2D vector (with double coordinates) projection of a given
- * 		vector on (or onto) a nonzero one.
+ * \brief	Returns the 2D vector (with double coordinates) projection of a
+ * 		given vector on (or onto) a nonzero one.
  * \param	vec1 Vector projected
  * \param	vec2 Vector receiving projection.
  * \return	New vector.
@@ -779,8 +779,8 @@ t_vec2f						vec2f_project(t_vec2f vec1, t_vec2f vec2);
 t_vec2d						vec2d_project(t_vec2d vec1, t_vec2d vec2);
 /**
  * \fn		t_vec2ui vec2ui_project(t_vec2ui vec1, t_vec2ui vec2)
- * \brief	Return the 2D vector (with unsigned int coordinates) projection of a
- * 		given vector on (or onto) a nonzero one.
+ * \brief	Returns the 2D vector (with unsigned int coordinates) projection of
+ * 		a given vector on (or onto) a nonzero one.
  * \param	vec1 Vector projected
  * \param	vec2 Vector receiving projection.
  * \return	New vector.
@@ -795,28 +795,28 @@ t_vec2ui					vec2ui_project(t_vec2ui vec1, t_vec2ui vec2);
 
 /**
  * \fn		t_vec2i vec2i_set_length(t_vec2i vec1, int len)
- * \brief	Create a 2D vector (with int coordinates) from a given vector
+ * \brief	Creates a 2D vector (with int coordinates) from a given vector
  * 		modified in order to have a certain length.
  * \return	New vector.
  */
 t_vec2i						vec2i_set_length(t_vec2i vec1, int len);
 /**
  * \fn		t_vec2f vec2f_set_length(t_vec2f vec1, float len)
- * \brief	Create a 2D vector (with float coordinates) from a given vector
+ * \brief	Creates a 2D vector (with float coordinates) from a given vector
  * 		modified in order to have a certain length.
  * \return	New vector.
  */
 t_vec2f						vec2f_set_length(t_vec2f vec1, float len);
 /**
  * \fn		t_vec2d vec2d_set_length(t_vec2d vec1, double len)
- * \brief	Create a 2D vector (with double coordinates) from a given vector
+ * \brief	Creates a 2D vector (with double coordinates) from a given vector
  * 		modified in order to have a certain length.
  * \return	New vector.
  */
 t_vec2d						vec2d_set_length(t_vec2d vec1, double len);
 /**
  * \fn		t_vec2ui vec2ui_set_length(t_vec2ui vec1, t_u32 len)
- * \brief	Create a 2D vector (with unsigned int coordinates) from a given
+ * \brief	Creates a 2D vector (with unsigned int coordinates) from a given
  * 		vector modified in order to have a certain length.
  * \return	New vector.
  */
@@ -828,28 +828,28 @@ t_vec2ui					vec2ui_set_length(t_vec2ui vec1, t_u32 len);
 
 /**
  * \fn		t_vec2i vec2i_sub(t_vec2i vec1, t_vec2i vec2)
- * \brief	Return a 2D vector with int coordinates equal to the substraction
+ * \brief	Returns a 2D vector with int coordinates equal to the substraction
  * 		of vectors passed as parameters.
  * \return	New vector.
  */
 t_vec2i						vec2i_sub(t_vec2i vec1, t_vec2i vec2);
 /**
  * \fn		t_vec2f vec2f_sub(t_vec2f vec1, t_vec2f vec2)
- * \brief	Return a 2D vector with float coordinates equal to the substraction
+ * \brief	Returns a 2D vector with float coordinates equal to the substraction
  * 		of vectors passed as parameters.
  * \return	New vector.
  */
 t_vec2f						vec2f_sub(t_vec2f vec1, t_vec2f vec2);
 /**
  * \fn		t_vec2d vec2d_sub(t_vec2d vec1, t_vec2d vec2)
- * \brief	Return a 2D vector with double coordinates equal to the substraction
- * 		of vectors passed as parameters.
+ * \brief	Returns a 2D vector with double coordinates equal to the
+ * 		substraction of vectors passed as parameters.
  * \return	New vector.
  */
 t_vec2d						vec2d_sub(t_vec2d vec1, t_vec2d vec2);
 /**
  * \fn		t_vec2ui vec2ui_sub(t_vec2ui vec1, t_vec2ui vec2)
- * \brief	Return a 2D vector with unsigned int coordinates equal to the
+ * \brief	Returns a 2D vector with unsigned int coordinates equal to the
  * 		substraction of vectors passed as parameters.
  * \return	New vector.
  */
@@ -861,7 +861,7 @@ t_vec2ui					vec2ui_sub(t_vec2ui vec1, t_vec2ui vec2);
 
 /**
  * \fn		t_vec2f vec2f_from_angle(float angle)
- * \brief	Create a 2D vector with float coordinates from a given angle.
+ * \brief	Creates a 2D vector with float coordinates from a given angle.
  * \return	New vector.
  */
 t_vec2f						vec2f_from_angle(float angle);
@@ -872,19 +872,19 @@ t_vec2f						vec2f_from_angle(float angle);
 
 /**
  * \fn		t_vec3f vec3f(float x, float y, float z)
- * \brief	Create a 3D vector with float coordinates from parameters.
+ * \brief	Creates a 3D vector with float coordinates from parameters.
  * \return	Created structure (not allocated).
  */
 t_vec3f						vec3f(float x, float y, float z);
 /**
  * \fn		t_vec3i vec3i(int x, int y, int z)
- * \brief	Create a 3D vector with int coordinates from parameters.
+ * \brief	Creates a 3D vector with int coordinates from parameters.
  * \return	Created structure (not allocated).
  */
 t_vec3i						vec3i(int x, int y, int z);
 /**
  * \fn		t_vec3d vec3d(double x, double y, double z)
- * \brief	Create a 3D vector with double coordinates from parameters.
+ * \brief	Creates a 3D vector with double coordinates from parameters.
  * \return	Created structure (not allocated).
  */
 t_vec3d						vec3d(double x, double y, double z);
@@ -895,21 +895,21 @@ t_vec3d						vec3d(double x, double y, double z);
 
 /**
  * \fn		t_vec3i vec3i_add(t_vec3i vec1, t_vec3i vec2)
- * \brief	Return a 3D vector with int coordinates equal to the addition
+ * \brief	Returns a 3D vector with int coordinates equal to the addition
  * 		of vectors passed as parameters.
  * \return	New vector.
  */
 t_vec3i						vec3i_add(t_vec3i vec1, t_vec3i vec2);
 /**
  * \fn		t_vec3f vec3f_add(t_vec3f vec1, t_vec3f vec2)
- * \brief	Return a 3D vector with float coordinates equal to the addition
+ * \brief	Returns a 3D vector with float coordinates equal to the addition
  * 		of vectors passed as parameters.
  * \return	New vector.
  */
 t_vec3f						vec3f_add(t_vec3f vec1, t_vec3f vec2);
 /**
  * \fn		t_vec3d vec3d_add(t_vec3d vec1, t_vec3d vec2)
- * \brief	Return a 3D vector with double coordinates equal to the addition
+ * \brief	Returns a 3D vector with double coordinates equal to the addition
  * 		of vectors passed as parameters.
  * \return	New vector.
  */
@@ -921,21 +921,21 @@ t_vec3d						vec3d_add(t_vec3d vec1, t_vec3d vec2);
 
 /**
  * \fn		float vec3f_cross(t_vec3f vec1, t_vec3f vec2)
- * \brief	Return a 3D vector with float coordinates equal to the
+ * \brief	Returns a 3D vector with float coordinates equal to the
  * 		cross product of given vectors.
  * \return	New vector.
  */
 t_vec3f						vec3f_cross(t_vec3f vec1, t_vec3f vec2);
 /**
  * \fn		float vec3i_cross(t_vec3i vec1, t_vec3i vec2)
- * \brief	Return a 3D vector with int coordinates equal to the
+ * \brief	Returns a 3D vector with int coordinates equal to the
  * 		cross product of given vectors.
  * \return	New vector.
  */
 t_vec3i						vec3i_cross(t_vec3i vec1, t_vec3i vec2);
 /**
  * \fn		float vec3d_cross(t_vec3d vec1, t_vec3d vec2)
- * \brief	Return a 3D vector with double coordinates equal to the
+ * \brief	Returns a 3D vector with double coordinates equal to the
  * 		cross product of given vectors.
  * \return	New vector.
  */
@@ -947,19 +947,19 @@ t_vec3d						vec3d_cross(t_vec3d vec1, t_vec3d vec2);
 
 /**
  * \fn		float vec3i_dist(t_vec3i vec1, t_vec3i vec2)
- * \brief	Return the distance between two 3D vectors with int coordinates.
+ * \brief	Returns the distance between two 3D vectors with int coordinates.
  * \return	Distance value.
  */
 float						vec3i_dist(t_vec3i vec1, t_vec3i vec2);
 /**
  * \fn		float vec3f_dist(t_vec3f vec1, t_vec3f vec2)
- * \brief	Return the distance between two 3D vectors with float coordinates.
+ * \brief	Returns the distance between two 3D vectors with float coordinates.
  * \return	Distance value.
  */
 float						vec3f_dist(t_vec3f vec1, t_vec3f vec2);
 /**
  * \fn		float vec3d_dist(t_vec3d vec1, t_vec3d vec2)
- * \brief	Return the distance between two 3D vectors with double coordinates.
+ * \brief	Returns the distance between two 3D vectors with double coordinates.
  * \return	Distance value.
  */
 float						vec3d_dist(t_vec3d vec1, t_vec3d vec2);
@@ -970,21 +970,21 @@ float						vec3d_dist(t_vec3d vec1, t_vec3d vec2);
 
 /**
  * \fn		float vec3i_dist_sq(t_vec3i vec1, t_vec3i vec2)
- * \brief	Return the square distance between two 3D vectors with int
+ * \brief	Returns the square distance between two 3D vectors with int
  * 		coordinates.
  * \return	Square distance value.
  */
 float						vec3i_dist_sq(t_vec3i vec1, t_vec3i vec2);
 /**
  * \fn		float vec3f_dist_sq(t_vec3f vec1, t_vec3f vec2)
- * \brief	Return the square distance between two 3D vectors with float
+ * \brief	Returns the square distance between two 3D vectors with float
  * 		coordinates.
  * \return	Square distance value.
  */
 float						vec3f_dist_sq(t_vec3f vec1, t_vec3f vec2);
 /**
  * \fn		float vec3d_dist_sq(t_vec3d vec1, t_vec3d vec2)
- * \brief	Return the square distance between two 3D vectors with double
+ * \brief	Returns the square distance between two 3D vectors with double
  * 		coordinates.
  * \return	Square distance value.
  */
@@ -996,21 +996,21 @@ float						vec3d_dist_sq(t_vec3d vec1, t_vec3d vec2);
 
 /**
  * \fn		t_vec3i vec3i_div(t_vec3i vec1, int div)
- * \brief	Return a 3D vector with int coordinates equal to the division
+ * \brief	Returns a 3D vector with int coordinates equal to the division
  * 		of a given vector coordinates.
  * \return	New vector.
  */
 t_vec3i						vec3i_div(t_vec3i vec1, int div);
 /**
  * \fn		t_vec3f vec3f_div(t_vec3f vec1, float div)
- * \brief	Return a 3D vector with float coordinates equal to the division
+ * \brief	Returns a 3D vector with float coordinates equal to the division
  * 		of a given vector coordinates.
  * \return	New vector.
  */
 t_vec3f						vec3f_div(t_vec3f vec1, float div);
 /**
  * \fn		t_vec3d vec3d_div(t_vec3d vec1, double div)
- * \brief	Return a 3D vector with double coordinates equal to the division
+ * \brief	Returns a 3D vector with double coordinates equal to the division
  * 		of a given vector coordinates.
  * \return	New vector.
  */
@@ -1022,19 +1022,19 @@ t_vec3d						vec3d_div(t_vec3d vec1, double div);
 
 /**
  * \fn		float vec3f_dot(t_vec3f vec1, t_vec3f vec2)
- * \brief	Return the dot product of two 3D vectors with float coordinates.
+ * \brief	Returns the dot product of two 3D vectors with float coordinates.
  * \return	Dot product value.
  */
 float						vec3f_dot(t_vec3f vec1, t_vec3f vec2);
 /**
  * \fn		float vec3i_dot(t_vec3i vec1, t_vec3i vec2)
- * \brief	Return the dot product of two 3D vectors with int coordinates.
+ * \brief	Returns the dot product of two 3D vectors with int coordinates.
  * \return	Dot product value.
  */
 float						vec3i_dot(t_vec3i vec1, t_vec3i vec2);
 /**
  * \fn		float vec3d_dot(t_vec3d vec1, t_vec3d vec2)
- * \brief	Return the dot product of two 3D vectors with double coordinates.
+ * \brief	Returns the dot product of two 3D vectors with double coordinates.
  * \return	Dot product value.
  */
 float						vec3d_dot(t_vec3d vec1, t_vec3d vec2);
@@ -1045,7 +1045,7 @@ float						vec3d_dot(t_vec3d vec1, t_vec3d vec2);
 
 /**
  * \fn		bool vec3f_equal(t_vec3f *vec1, t_vec3f *vec2)
- * \brief	Verify if two vectors are equal or not.
+ * \brief	Verifies if two vectors are equal or not.
  * \return	True if both vectors have same soordinates, false otherwise.
  */
 bool						vec3f_equal(t_vec3f *vec1, t_vec3f *vec2);
@@ -1056,19 +1056,19 @@ bool						vec3f_equal(t_vec3f *vec1, t_vec3f *vec2);
 
 /**
  * \fn		float vec3i_length(t_vec3i vec1)
- * \brief	Return the length of a given 3D vector with int coordinates.
+ * \brief	Returns the length of a given 3D vector with int coordinates.
  * \return	Length value as float.
  */
 float						vec3i_length(t_vec3i vec1);
 /**
  * \fn		float vec3f_length(t_vec3f vec1)
- * \brief	Return the length of a given 3D vector with float coordinates.
+ * \brief	Returns the length of a given 3D vector with float coordinates.
  * \return	Length value as float.
  */
 float						vec3f_length(t_vec3f vec1);
 /**
  * \fn		float vec3d_length(t_vec3d vec1)
- * \brief	Return the length of a given 3D vector with double coordinates.
+ * \brief	Returns the length of a given 3D vector with double coordinates.
  * \return	Length value as float.
  */
 float						vec3d_length(t_vec3d vec1);
@@ -1079,21 +1079,21 @@ float						vec3d_length(t_vec3d vec1);
 
 /**
  * \fn		float vec3i_length_sq(t_vec3i vec1)
- * \brief	Return the square length of a given 3D vector with int
+ * \brief	Returns the square length of a given 3D vector with int
  * 		coordinates.
  * \return	Square length value as float.
  */
 float						vec3i_length_sq(t_vec3i vec1);
 /**
  * \fn		float vec3f_length_sq(t_vec3f vec1)
- * \brief	Return the square length of a given 3D vector with float
+ * \brief	Returns the square length of a given 3D vector with float
  * 		coordinates.
  * \return	Square length value as float.
  */
 float						vec3f_length_sq(t_vec3f vec1);
 /**
  * \fn		float vec3d_length_sq(t_vec3d vec1)
- * \brief	Return the square length of a given 3D vector with double
+ * \brief	Returns the square length of a given 3D vector with double
  * 		coordinates.
  * \return	Square length value as float.
  */
@@ -1105,21 +1105,21 @@ float						vec3d_length_sq(t_vec3d vec1);
 
 /**
  * \fn		t_vec3i vec3i_mul(t_vec3i vec1, int mul)
- * \brief	Return a 3D vector with int coordinates equal to the
+ * \brief	Returns a 3D vector with int coordinates equal to the
  * 		multiplication of a given vector coordinates.
  * \return	New vector.
  */
 t_vec3i						vec3i_mul(t_vec3i vec1, int mul);
 /**
  * \fn		t_vec3f vec3f_mul(t_vec3f vec1, float mul)
- * \brief	Return a 3D vector with float coordinates equal to the
+ * \brief	Returns a 3D vector with float coordinates equal to the
  * 		multiplication of a given vector coordinates.
  * \return	New vector.
  */
 t_vec3f						vec3f_mul(t_vec3f vec1, float mul);
 /**
  * \fn		t_vec3d vec3d_mul(t_vec3d vec1, double mul)
- * \brief	Return a 3D vector with double coordinates equal to the
+ * \brief	Returns a 3D vector with double coordinates equal to the
  * 		multiplication of a given vector coordinates.
  * \return	New vector.
  */
@@ -1131,21 +1131,21 @@ t_vec3d						vec3d_mul(t_vec3d vec1, double mul);
 
 /**
  * \fn		t_vec3i vec3i_normalize(t_vec3i vec1)
- * \brief	Return the normalized version of a given 3D vector with int
+ * \brief	Returns the normalized version of a given 3D vector with int
  * 		coordinates.
  * \return	New vector.
  */
 t_vec3f						vec3i_normalize(t_vec3i vec1);
 /**
  * \fn		t_vec3f vec3f_normalize(t_vec3f vec1)
- * \brief	Return the normalized version of a given 3D vector with float
+ * \brief	Returns the normalized version of a given 3D vector with float
  * 		coordinates.
  * \return	New vector.
  */
 t_vec3f						vec3f_normalize(t_vec3f vec1);
 /**
  * \fn		t_vec3d vec3d_normalize(t_vec3d vec1)
- * \brief	Return the normalized version of a given 3D vector with double
+ * \brief	Returns the normalized version of a given 3D vector with double
  * 		coordinates.
  * \return	New vector.
  */
@@ -1157,21 +1157,21 @@ t_vec3d						vec3d_normalize(t_vec3d vec1);
 
 /**
  * \fn		t_vec3i vec3i_set_length(t_vec3i vec1, int len)
- * \brief	Create a 3D vector (with int coordinates) from a given vector
+ * \brief	Creates a 3D vector (with int coordinates) from a given vector
  * 		modified in order to have a certain length.
  * \return	New vector.
  */
 t_vec3i						vec3i_set_length(t_vec3i vec1, int len);
 /**
  * \fn		t_vec3f vec3f_set_length(t_vec3f vec1, float len)
- * \brief	Create a 3D vector (with float coordinates) from a given vector
+ * \brief	Creates a 3D vector (with float coordinates) from a given vector
  * 		modified in order to have a certain length.
  * \return	New vector.
  */
 t_vec3f						vec3f_set_length(t_vec3f vec1, float len);
 /**
  * \fn		t_vec3d vec3d_set_length(t_vec3d vec1, double len)
- * \brief	Create a 3D vector (with double coordinates) from a given vector
+ * \brief	Creates a 3D vector (with double coordinates) from a given vector
  * 		modified in order to have a certain length.
  * \return	New vector.
  */
@@ -1183,22 +1183,22 @@ t_vec3d						vec3d_set_length(t_vec3d vec1, double len);
 
 /**
  * \fn		t_vec3i vec3i_sub(t_vec3i vec1, t_vec3i vec2)
- * \brief	Return a 3D vector with int coordinates equal to the substraction
+ * \brief	Returns a 3D vector with int coordinates equal to the substraction
  * 		of vectors passed as parameters.
  * \return	New vector.
  */
 t_vec3i						vec3i_sub(t_vec3i vec1, t_vec3i vec2);
 /**
  * \fn		t_vec3f vec3f_sub(t_vec3f vec1, t_vec3f vec2)
- * \brief	Return a 3D vector with float coordinates equal to the substraction
+ * \brief	Returns a 3D vector with float coordinates equal to the substraction
  * 		of vectors passed as parameters.
  * \return	New vector.
  */
 t_vec3f						vec3f_sub(t_vec3f vec1, t_vec3f vec2);
 /**
  * \fn		t_vec3d vec3d_sub(t_vec3d vec1, t_vec3d vec2)
- * \brief	Return a 3D vector with double coordinates equal to the substraction
- * 		of vectors passed as parameters.
+ * \brief	Returns a 3D vector with double coordinates equal to the
+ * 		substraction of vectors passed as parameters.
  * \return	New vector.
  */
 t_vec3d						vec3d_sub(t_vec3d vec1, t_vec3d vec2);
@@ -1209,34 +1209,34 @@ t_vec3d						vec3d_sub(t_vec3d vec1, t_vec3d vec2);
 
 /**
  * \fn		t_vec4f vec4f(float x, float y, float z, float w)
- * \brief	Create a 4D vector with float coordinates from parameters.
+ * \brief	Creates a 4D vector with float coordinates from parameters.
  * \return	Created structure (not allocated).
  */
 t_vec4f						vec4f(float x, float y, float z, float w);
 /**
  * \fn		t_vec4f vec4f_div(t_vec4f vec, float d)
- * \brief	Return a 4D vector with float coordinates equal to the division
+ * \brief	Returns a 4D vector with float coordinates equal to the division
  * 		of a given vector coordinates.
  * \return	New vector.
  */
 t_vec4f						vec4f_div(t_vec4f vec, float d);
 /**
  * \fn		t_vec4f vec4f_mul(t_vec4f vec1, float d)
- * \brief	Return a 4D vector with float coordinates equal to the
+ * \brief	Returns a 4D vector with float coordinates equal to the
  * 		multiplication of a given vector coordinates.
  * \return	New vector.
  */
 t_vec4f						vec4f_mul(t_vec4f vec, float d);
 /**
  * \fn		t_vec4f vec4f_add(t_vec4f vec1, t_vec4f vec2)
- * \brief	Return a 4D vector with float coordinates equal to the addition
+ * \brief	Returns a 4D vector with float coordinates equal to the addition
  * 		of vectors passed as parameters.
  * \return	New vector.
  */
 t_vec4f						vec4f_add(t_vec4f vec1, t_vec4f vec2);
 /**
  * \fn		t_vec4f vec4f_sub(t_vec4f vec1, t_vec4f vec2)
- * \brief	Return a 4D vector with float coordinates equal to the substraction
+ * \brief	Returns a 4D vector with float coordinates equal to the substraction
  * 		of vectors passed as parameters.
  * \return	New vector.
  */
@@ -1248,33 +1248,33 @@ t_vec4f						vec4f_sub(t_vec4f vec1, t_vec4f vec2);
 
 /**
  * \fn		float vec4f_cross(t_vec4f vec1, t_vec4f vec2)
- * \brief	Return a 4D vector with float coordinates equal to the
+ * \brief	Returns a 4D vector with float coordinates equal to the
  * 		cross product of given vectors.
  * \return	New vector.
  */
 t_vec4f						vec4f_cross(t_vec4f vec1, t_vec4f vec2);
 /**
  * \fn		float vec4f_dot(t_vec4f vec1, t_vec4f vec2)
- * \brief	Return the dot product of two 4D vectors with float coordinates.
+ * \brief	Returns the dot product of two 4D vectors with float coordinates.
  * \return	Dot product value.
  */
 float						vec4f_dot(t_vec4f vec1, t_vec4f vec2);
 /**
  * \fn		float vec4f_length(t_vec4f vec1)
- * \brief	Return the length of a given 4D vector with float coordinates.
+ * \brief	Returns the length of a given 4D vector with float coordinates.
  * \return	Length value as float.
  */
 float						vec4f_length(t_vec4f vec1);
 /**
  * \fn		t_vec4f vec4f_normalize(t_vec4f vec1)
- * \brief	Return the normalized version of a given 4D vector with float
+ * \brief	Returns the normalized version of a given 4D vector with float
  * 		coordinates.
  * \return	New vector.
  */
 t_vec4f						vec4f_normalize(t_vec4f vec1);
 /**
  * \fn		float vec4f_dist(t_vec4f vec1, t_vec4f vec2)
- * \brief	Return the distance between two 4D vectors with float coordinates.
+ * \brief	Returns the distance between two 4D vectors with float coordinates.
  * \return	Distance value.
  */
 float						vec4f_dist(t_vec4f vec1, t_vec4f vec2);

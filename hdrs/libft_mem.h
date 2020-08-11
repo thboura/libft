@@ -6,7 +6,7 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/07 15:36:01 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/06 15:59:03 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/11 12:49:45 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_bzero(void *s, size_t n);
 
 /**
  * \fn		void ft_freetab(void ***tab)
- * \brief	Free a two-dimensional array and set its pointer to NULL.
+ * \brief	Free a two-dimensional array and sets its pointer to NULL.
  *
  * \sa		Be carefull : all sub-arrays are freed, so double free can occur.
  */
@@ -99,7 +99,7 @@ void	ft_memdel(void **ap);
 /**
  * \fn		void *ft_memfill(void *s, void *elem, size_t number_of_elem,
  * 		size_t sizeof_elem)
- * \brief	Fill a memory area with a given amount of copy of an element with
+ * \brief	Fills a memory area with a given amount of copy of an element with
  * 		fixed size.
  * \param	s Pointer on memory area to fill
  * \param	elem Pointer on element that will be copied
@@ -150,7 +150,7 @@ void	*ft_memset(void *s, int c, size_t n);
 
 /**
  * \fn		void ft_memswap(void *a, void *b, size_t n)
- * \brief	Swap a given number of bytes of two memory areas.
+ * \brief	Swaps a given number of bytes of two memory areas.
  */
 void	ft_memswap(void *a, void *b, size_t n);
 
