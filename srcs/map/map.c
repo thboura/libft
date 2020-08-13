@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kguibout <kguibout@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/20 15:18:07 by kguibout          #+#    #+#             */
-/*   Updated: 2020/01/27 16:22:45 by kguibout         ###   ########.fr       */
+/*   Updated: 2020/08/13 15:28:27 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_map.h"
 #include "libft.h"
-#include "assert.h"
 
 static int	return_value(t_map *map, size_t key, size_t high, size_t low)
 {
@@ -81,7 +80,6 @@ bool		map_add(t_map *map, size_t key, void *data)
 	size_t	elem_index;
 
 	elem_index = map_binary_search(map, key);
-	assert(elem_index == map->total || elem_index <= map->total);
 	if (elem_index != map->total && map->elem[elem_index].key == key)
 		ft_memcpy(map->elem[elem_index].data, data, map->sizeof_elem);
 	else

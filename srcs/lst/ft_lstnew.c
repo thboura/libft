@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kguibout <kguibout@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/30 21:56:44 by kguibout          #+#    #+#             */
-/*   Updated: 2018/12/18 10:50:52 by kguibout         ###   ########.fr       */
+/*   Updated: 2020/08/12 12:18:56 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(const void *content, size_t content_size)
 	if ((new = (t_list *)ft_memalloc(sizeof(t_list))) == NULL)
 		return (NULL);
 	new->next = NULL;
-	if (content == NULL)\
+	if (content == NULL)
 	{
 		new->content = NULL;
 		new->content_size = 0;

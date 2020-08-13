@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   map_p2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kguibout <kguibout@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:51:00 by kguibout          #+#    #+#             */
-/*   Updated: 2020/01/27 09:28:38 by kguibout         ###   ########.fr       */
+/*   Updated: 2020/08/13 15:28:32 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_map.h"
 #include "libft_mem.h"
-#include "assert.h"
 
 t_map	*map_init(size_t sizeof_elem)
 {
@@ -85,7 +84,6 @@ bool	map_resize(t_map *map, size_t capacity)
 
 void	*map_get_index(t_map *map, t_u64 index)
 {
-	assert(index < map->total);
 	if (index >= map->total)
 		return (NULL);
 	return (map->elem[index].data);
