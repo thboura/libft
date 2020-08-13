@@ -6,7 +6,7 @@
 /*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 11:56:35 by kguibout          #+#    #+#             */
-/*   Updated: 2020/08/13 16:44:20 by thboura          ###   ########.fr       */
+/*   Updated: 2020/08/13 17:31:59 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 /**
  * \typedef	t_atof
- * \brief	Typedef of s_atof.
+ * \brief	Typedef of s_atof structure.
  */
 typedef struct s_atof	t_atof;
 /**

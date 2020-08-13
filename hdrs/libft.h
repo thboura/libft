@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kguibout <kguibout@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thboura <thboura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/06 21:40:51 by kuibout           #+#    #+#             */
-/*   Updated: 2020/01/22 10:58:30 by kguibout         ###   ########.fr       */
+/*   Updated: 2020/08/13 17:11:56 by thboura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@
 # include "libft_str.h"
 # include "ft_printf/ft_printf.h"
 
+/**
+ * \def		INT32MAX
+ * \brief	Custom definition of int max value regarding the os.
+ */
 # ifdef __unix__
 #  define INT32MAX __INT32_MAX__
 # else
